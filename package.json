@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "mocha": "^10.2.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
