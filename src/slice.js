@@ -2,25 +2,30 @@ const slice = (array, start, end) => {
     let length = array == null ? 0 : array.length
     if (!length) return []
 
+    // 定义 start end
     start = start == null ? 0 : start
     end = end === undefined ? length : end
 
+    // 处理负数
     if (start < 0) {
         start = -start > length ? 0 : start + length
     }
 
+    end = end > length ? length : end
     if (end < 0) {
-        end = -end > length ? length : end + length
+        end += length
     }
 
-    //   if (start >= end) return [];
     length = start > end ? 0 : (end - start) >>> 0
     start >>>= 0
+
+    let index = -1
+    const result = new Array(length)
+    while (++index < length) {
+        result[index] = array[index + start]
+    }
+
+    return result
 }
 
-let result = []
-// while() {
-//     result
-// }
-
-slice([1, 2, 3, 'as'], -2, 3)
+export default slice
