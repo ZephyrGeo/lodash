@@ -1,12 +1,11 @@
 const compact = (arr) => {
     let res = []
+    if (arr.length == 0) return []
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] !== 0 || false || NaN || '') {
-            res.push(arr[i])
-        }
+    let resIndex = 0
+    for (const value of arr) {
+        if (value) res[resIndex++] = value
     }
-
     return res
 }
 
