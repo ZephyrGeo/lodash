@@ -9,4 +9,4 @@ const compact = (arr) => {
     return res
 }
 
-export default compact1
+export default compact
