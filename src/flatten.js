@@ -6,7 +6,3 @@ const flatten = (arr) => {
 }
 
 export default flatten
-
-const arr = [1, 2, 3, [[4]]]
-
-console.log(flatten(arr))
