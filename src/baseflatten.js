@@ -24,6 +24,3 @@ const baseFlatten = (arr, depth, predicate, isStrict, result) => {
 }
 
 export default baseFlatten
-
-const arr = [1, [[[5]]], 6]
-console.log(baseFlatten(arr, 3))
