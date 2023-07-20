@@ -1,17 +1,10 @@
 import slice from './slice.js'
 
 const take = (arr, val = 1) => {
+    const length = arr.length
     let result = []
 
-    if (val > arr.length) {
-        result = slice(arr, 0)
-    } else if (val == 0) {
-        result = slice(arr.length)
-    } else {
-        result = slice(arr, 0, val)
-    }
-
-    return result
+    return (result = slice(arr, 0, val > length ? length : val))
 }
 
 export default take
