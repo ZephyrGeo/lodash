@@ -10,3 +10,5 @@ const reverse = (arr) => {
     }
     return arr
 }
+
+export default reverse
