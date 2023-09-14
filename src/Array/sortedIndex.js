@@ -1,6 +1,6 @@
 const sortedIndex = (arr, val) => {
     let left = 0
-    let right = arr.length
+    let right = arr.length - 1
 
     while (left < right) {
         let mid = (left + right) >>> 1

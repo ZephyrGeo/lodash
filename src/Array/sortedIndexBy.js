@@ -1,6 +1,6 @@
 const sortedIndexBy = (arr, value, iteratee) => {
     let left = 0
-    let right = arr.length
+    let right = arr.length - 1
 
     while (left < right) {
         const computed = iteratee(value)

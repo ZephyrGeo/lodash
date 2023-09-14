@@ -1,9 +1,22 @@
 const sortedIndexOf = (arr, val) => {
-    if (arr.length === 0) return -1
-    for (let i = arr.length - 1; i >= 0; i--) {
-        if (arr[i] === val) return i
+    let left = 0
+    let right = arr.length - 1
+
+    while (left < right) {
+        let mid = (left + right) >>> 1
+
+        if (arr[mid] === val) {
+            right = mid - 1
+        } else if (arr[mid] > val) {
+            right = mid - 1
+        } else left = mid + 1
     }
-    return -1
+
+    return left < arr.length && arr[left] === val ? left : -1
 }
 
 export default sortedIndexOf
+
+console.log(sortedIndexOf([4, 7, 7, 7, 8], 7))
+
+// => 1
