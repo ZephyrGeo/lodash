@@ -1,5 +1,4 @@
 const sortedIndex = (arr, val) => {
-    // 二分查找
     let left = 0
     let right = arr.length
 
@@ -11,13 +10,12 @@ const sortedIndex = (arr, val) => {
             right = mid - 1
         } else {
             left = mid + 1
-            return left
         }
     }
+    return left
 }
 
-const arr = [1, 3, 5, 7, 9, 11, 13]
-const target = 0
+export default sortedIndex
 
-const index = sortedIndex(arr, target)
-console.log(index) // 输出: 2
+// sortedIndex([30, 50], 40)
+// => 1
