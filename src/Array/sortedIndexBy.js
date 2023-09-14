@@ -15,8 +15,8 @@ const sortedIndexBy = (arr, value, iteratee) => {
     return left
 }
 
-const objects = [{ x: 4 }, { x: 5 }, { x: 6 }]
-const a = sortedIndexBy(objects, { x: 6 }, function (o) {
-    return o.x
-})
-console.log(a)
+// const objects = [{ x: 4 }, { x: 5 }, { x: 6 }]
+// sortedIndexBy(objects, { x: 6 }, function (o) {
+//     return o.x
+// })
+// => 0
