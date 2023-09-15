@@ -7,4 +7,5 @@ const intersection = (...arr) => {
     return result
 }
 
-console.log(intersection([2, 1, 3], [4, 2, 3], [2, 5, 3]))
+// intersection([2, 1, 3], [4, 2, 3], [2, 5, 3])
+// => [2,3]
