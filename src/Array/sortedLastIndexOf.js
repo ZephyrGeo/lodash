@@ -1,13 +1,24 @@
-const sortedLastIndexOf = (arr, val) => {
-    // find the value in the array, if it doesn't exist return -1
-    // if it does exist, return the index of the last occurence of the value
-    // if there are multiple occurences of the value, return the index of the last occurence
+const sortedLastIndexOf = (arr, value) => {
+    let left = 0
+    let right = arr.length - 1
 
-    if (arr.length === 0) return -1
-    for (let i = arr.length - 1; i >= 0; i--) {
-        if (arr[i] === val) return i
+    while (left <= right) {
+        let mid = (left + right) >>> 1
+
+        if (arr[mid] > value) {
+            right = mid - 1
+        } else if (arr[mid] < value) {
+            left = mid + 1
+        } else {
+            left = mid + 1
+        }
     }
-    return -1
+
+    return right < arr.length && arr[right] === value ? right : -1
 }
 
 export default sortedLastIndexOf
+
+console.log(sortedLastIndexOf([4, 7, 7, 7, 8], 7))
+
+// => 3
