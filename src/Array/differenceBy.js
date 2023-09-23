@@ -1,5 +1,4 @@
 const differenceBy = (arr, val, iteratee) => {
-    // return arr.filter(item => //是否在新的集 中)
     const set = new Set(val.map((item) => iteratee(item)))
 
     return arr.filter((item) => !set.has(iteratee(item)))
