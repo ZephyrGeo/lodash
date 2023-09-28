@@ -1,7 +1,15 @@
 const uniqBy = (arr, iteratee) => {
-    const set = new Set(arr.map((item) => iteratee(item)))
-    return arr.filter((item) => set.has(iteratee(item)))
+    const set = new Set()
+    const result = []
+    for (const el of arr) {
+        const newEl = iteratee(el)
+        if (!set.has(newEl)) {
+            result.push(el)
+            set.add(newEl)
+        }
+    }
+    return result
 }
 
-// uniqBy([2.1, 1.2, 2.3], Math.floor)
+// console.log(uniqBy([2.1, 1.2, 2.3], Math.floor))
 // => [2.1, 1.2]

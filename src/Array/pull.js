@@ -11,5 +11,6 @@ const pullSetFunction = (arr, ...val) => {
     return (arr = arr.filter((item) => !set.has(item)))
 }
 
+export default pull
 // pull([1, 2, 3, 1, 2, 3], 2, 3)
 // => [1,1]
