@@ -16,6 +16,8 @@ const endsWith = (string = '', target, position = string.length) => {
     return stringToCheck === target
 }
 
+export default endsWith
+
 console.log(endsWith('abc', 'c')) // => true
 console.log(endsWith('abc', 'a')) // => false
 console.log(endsWith('abc', 'b', 2)) // => true
