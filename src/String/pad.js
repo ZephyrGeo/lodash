@@ -1,10 +1,16 @@
-import repeat from './repeat.js'
-
 const pad = (string = '', length = 0, chars = ' ') => {
+    if (string.length >= length) {
+        return string
+    }
+
     const paddingLength = length - string.length
-    const leftPadding =
+    const leftPaddingLength = Math.floor(paddingLength / 2)
+    const rightPaddingLength = Math.ceil(paddingLength / 2)
+
+    const leftPadding = chars.repeat(leftPaddingLength)
+    const rightPadding = chars.repeat(rightPaddingLength)
+
+    return leftPadding + string + rightPadding
 }
 
-pad('abc', 9, '_+')
-
-console.log(3 / 2, 3 % 2)
+console.log(pad('abc', 8, '_+'))
