@@ -4,5 +4,3 @@ const mean = (array) => {
 }
 
 export default mean
-
-console.log(mean([4, 2, 8, 6]))

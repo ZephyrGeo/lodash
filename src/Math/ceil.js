@@ -7,3 +7,4 @@ const ceil = (number, precision = 0) => {
 
     return Math.ceil(number ** multi) / multi
 }
+export default ceil
